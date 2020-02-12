@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ElsysStates>
+<devType id="3">
+  <state code="0" text="Неизвестно"/>
+  <state code="1" text="Норма"/>
+  <state code="5" text="Неисправность"/>
+  <state code="10" text="Взлом двери"/>
+  <state code="12" text="Вход"/>
+  <state code="14" text="Заблокировано, дверь закрыта"/>
+  <state code="17" text="Разблокировано, дверь открыта"/>
+  <state code="18" text="Разблокировано, дверь закрыта"/>
+  <state code="20" text="Выход"/>
+  <state code="24" text="Удержание"/>
+  <state code="30" text="Заблокировано, дверь открыта"/>
+  <state code="34" text="Замок открыт,  проход разрешён"/>
+  <state code="36" text="Дверь не заперта"/>
+  <state code="40" text="Проход, дверь открыта"/>
+</devType>
+<devType id="4">
+  <state code="0" text="Неизвестно"/>
+  <state code="1" text="Норма"/>
+  <state code="5" text="Неисправность"/>
+  <state code="10" text="Взлом двери"/>
+  <state code="12" text="Вход"/>
+  <state code="14" text="Заблокировано, дверь закрыта"/>
+  <state code="20" text="Выход"/>
+  <state code="29" text="Приоткрыто"/>
+  <state code="30" text="Заблокировано, дверь открыта"/>
+  <state code="34" text="Замок открыт,  проход разрешён"/>
+  <state code="36" text="Дверь не заперта"/>
+  <state code="40" text="Проход, дверь открыта"/>
+</devType>
+<devType id="5">
+  <state code="0" text="Неизвестно"/>
+  <state code="4" text="Взлом"/>
+  <state code="5" text="Авария сетевого питания"/>
+  <state code="34" text="Норма"/>
+</devType>
+<devType id="6">
+</devType>
+<devType id="10">
+  <state code="0" text="Неизвестно"/>
+  <state code="5" text="Неисправность"/>  
+  <state code="31" text="Выход включен"/>
+  <state code="32" text="Выход выключен"/>
+</devType>
+<devType id="12">
+  <state code="3" text="Снято с охраны"/>
+  <state code="4" text="Тревога"/>
+  <state code="5" text="Неисправность"/>  
+  <state code="33" text="Неготовность"/>
+  <state code="34" text="На охране"/>
+  <state code="48" text="Частично на охране"/>
+</devType>
+<devType id="13">
+  <state code="3" text="Снято с охраны"/>
+  <state code="4" text="Тревога"/>
+  <state code="5" text="Неисправность"/>  
+  <state code="33" text="Неготовность"/>
+  <state code="34" text="На охране"/>
+  <state code="48" text="Частично на охране"/>
+</devType>
+<devType id="19">
+</devType>
+<devType id="21">
+</devType>
+<devType id="22">
+  <state code="0" text="Неизвестно"/>
+  <state code="1" text="Норма"/>
+  <state code="5" text="Неисправность"/>
+  <state code="10" text="Взлом двери"/>
+  <state code="12" text="Вход"/>
+  <state code="14" text="Заблокировано, дверь закрыта"/>
+  <state code="20" text="Выход"/>
+  <state code="24" text="Удержание"/>
+  <state code="30" text="Заблокировано, дверь открыта"/>
+  <state code="34" text="Замок открыт,  проход разрешён"/>
+  <state code="40" text="Проход, дверь открыта"/>
+  <state code="42" text="Заблокировано на вход"/>
+  <state code="43" text="Заблокировано на выход"/>
+  <state code="44" text="Разблокировано на вход"/>
+  <state code="45" text="Разблокировано на выход"/>
+  <state code="46" text="Разблокировано на вход, заблокировано на выход"/>
+  <state code="47" text="Заблокировано на вход, разблокировано на выход"/>
+ </devType>
+<devType id="27">
+  <state code="3" text="Снято с охраны"/>
+  <state code="4" text="Тревога"/>
+  <state code="5" text="Неисправность"/>
+  <state code="33" text="Неготовность"/>
+  <state code="34" text="На охране"/>
+  <state code="48" text="Частично на охране"/>  
+</devType>
+<devType id="28">
+  <state code="34" text="Норма"/>
+</devType>
+</ElsysStates>

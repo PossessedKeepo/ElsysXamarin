@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AccessLevels>
+  <AccessLevel Name="Уровень доступа 1" ID="1">
+    <AccessLevelItem ReaderID="17" TimeZoneID="10" />
+    <AccessLevelItem ReaderID="18" TimeZoneID="1" />
+    <AccessLevelItem ReaderID="32" TimeZoneID="7" />
+    <AccessLevelItem ReaderID="33" TimeZoneID="10" />
+    <AccessLevelItem ReaderID="144" TimeZoneID="1" />
+    <AccessLevelItem ReaderID="47" TimeZoneID="4" />
+    <AccessLevelItem ReaderID="48" TimeZoneID="7" />
+    <AccessLevelItem ReaderID="62" TimeZoneID="5" />
+    <AccessLevelItem ReaderID="63" TimeZoneID="7" />
+    <AccessLevelItem ReaderID="79" TimeZoneID="5" />
+    <AccessLevelItem ReaderID="80" TimeZoneID="9" />
+    <AccessLevelItem ReaderID="95" TimeZoneID="7" />
+    <AccessLevelItem ReaderID="96" TimeZoneID="10" />
+    <AccessLevelItem ReaderID="110" TimeZoneID="9" />
+    <AccessLevelItem ReaderID="111" TimeZoneID="3" />
+  </AccessLevel>
+</AccessLevels>

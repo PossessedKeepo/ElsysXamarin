@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TimeZones>
+  <TimeZone Name="Временная зона 1" ID="1">
+    <TimeInterval StartTime="0001-01-01T08:00:00" EndTime="0001-01-01T13:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+    <TimeInterval StartTime="0001-01-01T14:00:00" EndTime="0001-01-01T19:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+  </TimeZone>
+  <TimeZone Name="Временная зона 2" ID="2">
+    <TimeInterval StartTime="0001-01-01T08:00:00" EndTime="0001-01-01T13:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+    <TimeInterval StartTime="0001-01-01T14:00:00" EndTime="0001-01-01T19:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+  </TimeZone>
+  <TimeZone Name="Временная зона 3" ID="3">
+    <TimeInterval StartTime="0001-01-01T08:00:00" EndTime="0001-01-01T13:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+    <TimeInterval StartTime="0001-01-01T14:00:00" EndTime="0001-01-01T19:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+  </TimeZone>
+  <TimeZone Name="Временная зона 4" ID="4">
+    <TimeInterval StartTime="0001-01-01T08:00:00" EndTime="0001-01-01T13:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+    <TimeInterval StartTime="0001-01-01T14:00:00" EndTime="0001-01-01T19:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+  </TimeZone>
+  <TimeZone Name="Временная зона 5" ID="5">
+    <TimeInterval StartTime="0001-01-01T08:00:00" EndTime="0001-01-01T13:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+    <TimeInterval StartTime="0001-01-01T14:00:00" EndTime="0001-01-01T19:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+  </TimeZone>
+  <TimeZone Name="Временная зона 6" ID="6">
+    <TimeInterval StartTime="0001-01-01T08:00:00" EndTime="0001-01-01T13:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+    <TimeInterval StartTime="0001-01-01T14:00:00" EndTime="0001-01-01T19:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+  </TimeZone>
+  <TimeZone Name="Временная зона 7" ID="7">
+    <TimeInterval StartTime="0001-01-01T08:00:00" EndTime="0001-01-01T13:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+    <TimeInterval StartTime="0001-01-01T14:00:00" EndTime="0001-01-01T19:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+  </TimeZone>
+  <TimeZone Name="Временная зона 8" ID="8">
+    <TimeInterval StartTime="0001-01-01T08:00:00" EndTime="0001-01-01T13:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+    <TimeInterval StartTime="0001-01-01T14:00:00" EndTime="0001-01-01T19:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+  </TimeZone>
+  <TimeZone Name="Временная зона 9" ID="9">
+    <TimeInterval StartTime="0001-01-01T08:00:00" EndTime="0001-01-01T13:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+    <TimeInterval StartTime="0001-01-01T14:00:00" EndTime="0001-01-01T19:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+  </TimeZone>
+  <TimeZone Name="Временная зона 10" ID="10">
+    <TimeInterval StartTime="0001-01-01T08:00:00" EndTime="0001-01-01T13:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+    <TimeInterval StartTime="0001-01-01T14:00:00" EndTime="0001-01-01T19:00:00" ActiveDays="127" ActiveHolidays="1" Period="7" StartDate="2019-11-19T00:00:00" EndDate="2020-03-19T00:00:00" NoUsingHolidays="false" />
+  </TimeZone>
+</TimeZones>

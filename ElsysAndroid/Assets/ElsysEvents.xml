@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ElsysEvents>
+    <devType id="3">
+        <message code="1" type="Normal" priority="5" text="Штатный вход %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="in"/>
+        <message code="3" type="Normal" priority="5" text="Штатный выход %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="out"/>
+        <message code="8" type="Normal" priority="4" text="Закрытие двери" newState="askDriver" />
+        <message code="9" type="Normal" priority="4" text="Открытие двери" newState="askDriver" />
+        <message code="24" type="Normal" priority="4" text="Предъявлена первая карта при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="25" type="Normal" priority="4" text="Предъявлена вторая карта при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="26" type="Normal" priority="4" text="Предъявлена третья карта при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="27" type="Normal" priority="4" text="Действие 1 (входной считыватель) %CardNo" newState="askDriver" />
+        <message code="28" type="Normal" priority="4" text="Действие 2 (входной считыватель) %CardNo" newState="askDriver" />
+        <message code="29" type="Normal" priority="4" text="Действие 3 (входной считыватель) %CardNo" newState="askDriver" />
+        <message code="30" type="Normal" priority="4" text="Постановка на охрану вх. считывателем %CardNo" newState="askDriver" />
+        <message code="31" type="Normal" priority="4" text="Снятие с охраны вх. считывателем %CardNo" newState="askDriver" />
+        <message code="32" type="Normal" priority="4" text="Предоставление доступа на вход по кнопке" newState="askDriver" passDirection="in"/>
+        <message code="33" type="Normal" priority="4" text="Фактический вход по кнопке" newState="askDriver" passDirection="in"/>
+        <message code="46" type="Normal" priority="4" text="Предъявлена первая карта при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="47" type="Normal" priority="4" text="Предъявлена вторая карта при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="48" type="Normal" priority="4" text="Предъявлена третья карта при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="49" type="Normal" priority="4" text="Действие 1 (выходной считыватель) %CardNo" newState="askDriver" />
+        <message code="50" type="Normal" priority="4" text="Действие 2 (выходной считыватель) %CardNo" newState="askDriver" />
+        <message code="51" type="Normal" priority="4" text="Действие 3 (выходной считыватель) %CardNo" newState="askDriver" />
+        <message code="52" type="Normal" priority="4" text="Постановка на охрану вых. считывателем %CardNo" newState="askDriver" />
+        <message code="53" type="Normal" priority="4" text="Снятие с охраны вых. считывателем %CardNo" newState="askDriver" />
+        <message code="54" type="Normal" priority="4" text="Предоставление доступа на выход по кнопке" newState="askDriver" passDirection="out"/>
+        <message code="55" type="Normal" priority="4" text="Фактический выход по кнопке" newState="askDriver" passDirection="out"/>
+        <message code="56" type="Normal" priority="4" text="Предоставление доступа на вход %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="57" type="Normal" priority="4" text="Предоставление доступа на выход %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="60" type="Normal" priority="4" text="Требуется подтверждение доступа при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="61" type="Normal" priority="4" text="Требуется подтверждение доступа при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="62" type="Normal" priority="4" text="Подтв. доступа на вход оператором %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="63" type="Normal" priority="4" text="Подтв. доступа на выход оператором %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="64" type="Normal" priority="46" text="Отказ в доступе на вход оператором %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="65" type="Normal" priority="46" text="Отказ в доступе на выход оператором %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="66" type="Normal" priority="4" text="Сброс режима подтверждения входного считывателя" newState="askDriver" />
+        <message code="67" type="Normal" priority="4" text="Сброс режима подтверждения выходного считывателя" newState="askDriver" />
+        <message code="68" type="Normal" priority="10" text="Блокировка" newState="askDriver" />
+        <message code="69" type="Normal" priority="25" text="Разблокировка" newState="askDriver" />
+        <message code="70" type="Normal" priority="4" text="Нормальный режим" newState="askDriver" />
+        <message code="71" type="Normal" priority="10" text="Блокировка выходной двери" newState="askDriver" />
+        <message code="72" type="Normal" priority="25" text="Разблокировка выходной двери" newState="askDriver" />
+        <message code="73" type="Normal" priority="4" text="Нормальный режим (выходная дверь)" newState="askDriver" />
+        <message code="75" type="Normal" priority="4" text="Подтверждение доступа картой при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="76" type="Normal" priority="4" text="Подтверждение доступа картой при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="83" type="Normal" priority="4" text="Ввод PIN1 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="84" type="Normal" priority="4" text="Ввод PIN2 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="85" type="Normal" priority="4" text="Ввод PIN3 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="86" type="Normal" priority="4" text="Ввод PIN4 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="87" type="Normal" priority="4" text="Ввод PIN5 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="88" type="Normal" priority="4" text="Ввод PIN6 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="89" type="Normal" priority="4" text="Ввод PIN7 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="90" type="Normal" priority="4" text="Ввод PIN8 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="91" type="Normal" priority="4" text="Ввод PIN9 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="92" type="Normal" priority="4" text="Ввод PIN10 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="93" type="Normal" priority="4" text="Ввод PIN11 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="94" type="Normal" priority="4" text="Ввод PIN12 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="95" type="Normal" priority="4" text="Ввод PIN13 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="96" type="Normal" priority="4" text="Ввод PIN14 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="97" type="Normal" priority="4" text="Ввод PIN15 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="98" type="Normal" priority="4" text="Ввод PIN16 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="99" type="Normal" priority="4" text="Ввод PIN1 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="100" type="Normal" priority="4" text="Ввод PIN2 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="101" type="Normal" priority="4" text="Ввод PIN3 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="102" type="Normal" priority="4" text="Ввод PIN4 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="103" type="Normal" priority="4" text="Ввод PIN5 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="104" type="Normal" priority="4" text="Ввод PIN6 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="105" type="Normal" priority="4" text="Ввод PIN7 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="106" type="Normal" priority="4" text="Ввод PIN8 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="107" type="Normal" priority="4" text="Ввод PIN9 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="108" type="Normal" priority="4" text="Ввод PIN10 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="109" type="Normal" priority="4" text="Ввод PIN11 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="110" type="Normal" priority="4" text="Ввод PIN12 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="111" type="Normal" priority="4" text="Ввод PIN13 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="112" type="Normal" priority="4" text="Ввод PIN14 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="113" type="Normal" priority="4" text="Ввод PIN15 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="114" type="Normal" priority="4" text="Ввод PIN16 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="119" type="Normal" priority="7" text="Вход с нарушением временной зоны %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="In"/>
+        <message code="120" type="Normal" priority="7" text="Выход с нарушением временной зоны %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="Out"/>
+        <message code="121" type="Normal" priority="7" text="Вход с нарушением зоны доступа %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="In"/>
+        <message code="122" type="Normal" priority="7" text="Выход с нарушением зоны доступа %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="Out"/>
+        <message code="130" type="Normal" priority="5" text="На охране" newState="askDriver" />
+        <message code="131" type="Normal" priority="4" text="Снятие с охраны" newState="askDriver" />
+        <message code="132" type="Normal" priority="41" text="Невзятие" newState="askDriver" />
+        <message code="133" type="Normal" priority="7" text="Задержка взятия" newState="askDriver" />
+        <message code="136" type="Normal" priority="5" text="Штатный вход первого %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="137" type="Normal" priority="5" text="Штатный выход последнего %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="138" type="Normal" priority="5" text="Штатный вход первого с заданным УД %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="139" type="Normal" priority="5" text="Штатный выход последнего с заданным УД %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="142" type="Normal" priority="4" text="Удержание ключа/карты вх. сч. %CardNo" newState="askDriver" />
+        <message code="143" type="Normal" priority="4" text="Удержание ключа/карты вых. сч. %CardNo" newState="askDriver" />
+        <message code="144" type="Normal" priority="4" text="Отпускание ключа/карты вх. сч. %CardNo" newState="askDriver" />
+        <message code="145" type="Normal" priority="4" text="Отпускание ключа/карты вых. сч. %CardNo" newState="askDriver" />
+        <message code="148" type="Normal" priority="4" text="Идентификация пользователя (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="149" type="Normal" priority="4" text="Идентификация пользователя (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="150" type="Normal" priority="4" text="Идентификация пользователя WEB (вх. сч.) %CardNo" newState="askDriver" />    
+        <message code="151" type="Normal" priority="4" text="Идентификация пользователя WEB (вых. сч.) %CardNo" newState="askDriver" />  
+        <message code="152" type="Normal" priority="4" text="Восст. связи со считывателем (вх. сч.)" newState="askDriver" />  
+        <message code="153" type="Normal" priority="4" text="Восст. связи со считывателем (вых. сч.)" newState="askDriver" />  
+        <message code="2" type="Trouble" priority="50" text="Вход под принуждением %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="In"/>
+        <message code="4" type="Trouble" priority="50" text="Выход под принуждением %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="Out"/>
+        <message code="5" type="Trouble" priority="20" text="Дверь не заперта" newState="askDriver" />
+        <message code="6" type="Trouble" priority="50" text="Взлом двери" newState="askDriver" />
+        <message code="7" type="Trouble" priority="31" text="Удержание двери" newState="askDriver" />
+        <message code="12" type="Trouble" priority="50" text="Нарушение зоны доступа при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="13" type="Trouble" priority="45" text="Отказ в доступе на вход - нет прав  %CardNo" newState="askDriver" passDirection="in" />
+        <message code="14" type="Trouble" priority="45" text="Нарушение временной зоны при входе  %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="15" type="Trouble" priority="45" text="Неизвестная карта при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="16" type="Trouble" priority="45" text="Неизвестный пин-код при входе %PinCode" newState="askDriver" passDirection="in"/>
+        <message code="17" type="Trouble" priority="45" text="Запрет входа - ограничение доступа %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="18" type="Trouble" priority="45" text="Отказ в доступе на вход - блокировка %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="19" type="Trouble" priority="45" text="Неверный пин-код при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="20" type="Trouble" priority="45" text="Отказ в доступе - нет полномочий (вх. сч.) %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="21" type="Trouble" priority="45" text="Ошибка ввода 2-й карты при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="22" type="Trouble" priority="45" text="Ошибка ввода 3-й карты при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="23" type="Trouble" priority="45" text="Любой отказ в доступе при входе" newState="askDriver" passDirection="in"/>
+        <message code="34" type="Trouble" priority="50" text="Нарушение зоны доступа при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="35" type="Trouble" priority="45" text="Отказ в доступе на выход - нет прав %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="36" type="Trouble" priority="45" text="Нарушение временной зоны при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="37" type="Trouble" priority="45" text="Неизвестная карта при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="38" type="Trouble" priority="45" text="Неизвестный пин-код при выходе %PinCode" newState="askDriver" passDirection="out"/>
+        <message code="39" type="Trouble" priority="45" text="Запрет выхода - ограничение доступа %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="40" type="Trouble" priority="45" text="Отказ в доступе на выход - блокировка %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="41" type="Trouble" priority="45" text="Неверный пин-код при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="42" type="Trouble" priority="45" text="Отказ в доступе - нет полномочий (вых.сч.) %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="43" type="Trouble" priority="45" text="Ошибка ввода 2-й карты при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="44" type="Trouble" priority="45" text="Ошибка ввода 3-й карты при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="45" type="Trouble" priority="45" text="Любой отказ в доступе при выходе" newState="askDriver" passDirection="out"/>
+        <message code="58" type="Trouble" priority="50" text="Предост. доступа на вход под принуждением %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="59" type="Trouble" priority="50" text="Предост. доступа на выход под принуждением %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="124" type="Trouble" priority="45" text="Просроченная карта при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="125" type="Trouble" priority="45" text="Просроченная карта при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="126" type="Trouble" priority="45" text="Блокированная карта при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="127" type="Trouble" priority="45" text="Блокированная карта при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="134" type="Trouble" priority="31" text="Тревога входной зоны" newState="askDriver" />
+        <message code="135" type="Trouble" priority="50" text="Тревога" newState="askDriver" />
+        <message code="154" type="Trouble" priority="45" text="Потеря связи со считывателем(вх. сч.)" newState="askDriver" />
+        <message code="155" type="Trouble" priority="45" text="Потеря связи со считывателем(вых. сч.)" newState="askDriver" />
+        <message code="10" type="Fault" priority="40" text="КЗ дверного контакта" newState="askDriver" />
+        <message code="11" type="Fault" priority="40" text="Обрыв дверного контакта" newState="askDriver" />
+        <message code="74" type="Fault" priority="40" text="Неисправность дверного контакта" newState="askDriver" />
+        <message code="146" type="Fault" priority="40" text="Вход не был совершён" newState="askDriver" passDirection="in"/>
+        <message code="147" type="Fault" priority="40" text="Выход не был совершён" newState="askDriver" passDirection="out"/>
+    </devType>
+    <devType id="4">
+        <message code="1" type="Normal" priority="5" text="Штатный вход %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="In"/>
+        <message code="3" type="Normal" priority="5" text="Штатный выход %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="Out"/>
+        <message code="8" type="Normal" priority="4" text="Ворота закрыты" newState="askDriver" />
+        <message code="9" type="Normal" priority="4" text="Ворота открыты полностью" newState="askDriver" />
+        <message code="24" type="Normal" priority="4" text="Предъявлена первая карта при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="25" type="Normal" priority="4" text="Предъявлена вторая карта при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="26" type="Normal" priority="4" text="Предъявлена третья карта при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="27" type="Normal" priority="4" text="Действие 1 (входной считыватель) %CardNo" newState="askDriver" />
+        <message code="28" type="Normal" priority="4" text="Действие 2 (входной считыватель) %CardNo" newState="askDriver" />
+        <message code="29" type="Normal" priority="4" text="Действие 3 (входной считыватель) %CardNo" newState="askDriver" />
+        <message code="30" type="Normal" priority="4" text="Постановка на охрану вх. считывателем %CardNo" newState="askDriver" />
+        <message code="31" type="Normal" priority="4" text="Снятие с охраны вх. считывателем %CardNo" newState="askDriver" />
+        <message code="32" type="Normal" priority="4" text="Предоставление доступа на вход по кнопке" newState="askDriver" passDirection="in"/>
+        <message code="33" type="Normal" priority="4" text="Фактический вход по кнопке" newState="askDriver" passDirection="in"/>
+        <message code="46" type="Normal" priority="4" text="Предъявлена первая карта при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="47" type="Normal" priority="4" text="Предъявлена вторая карта при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="48" type="Normal" priority="4" text="Предъявлена третья карта при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="49" type="Normal" priority="4" text="Действие 1 (вых. считыватель) %CardNo" newState="askDriver" />
+        <message code="50" type="Normal" priority="4" text="Действие 2 (вых. считыватель) %CardNo" newState="askDriver" />
+        <message code="51" type="Normal" priority="4" text="Действие 3 (вых. считыватель) %CardNo" newState="askDriver" />
+        <message code="52" type="Normal" priority="4" text="Постановка на охрану вых. считывателем %CardNo" newState="askDriver" />
+        <message code="53" type="Normal" priority="4" text="Снятие с охраны вых. считывателем %CardNo" newState="askDriver" />
+        <message code="54" type="Normal" priority="4" text="Предоставление доступа на выход по кнопке" newState="askDriver" passDirection="out"/>
+        <message code="55" type="Normal" priority="4" text="Фактический выход по кнопке" newState="askDriver" passDirection="out"/>
+        <message code="56" type="Normal" priority="4" text="Предоставление доступа на вход %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="57" type="Normal" priority="4" text="Предоставление доступа на выход %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="60" type="Normal" priority="4" text="Требуется подтверждение доступа при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="61" type="Normal" priority="4" text="Требуется подтверждение доступа при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="62" type="Normal" priority="4" text="Подтв. доступа на вход оператором %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="63" type="Normal" priority="4" text="Подтв. доступа на выход оператором %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="64" type="Normal" priority="46" text="Отказ в доступе на вход оператором %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="65" type="Normal" priority="46" text="Отказ в доступе на выход оператором %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="66" type="Normal" priority="4" text="Сброс режима подтверждения входного считывателя" newState="askDriver" />
+        <message code="67" type="Normal" priority="4" text="Сброс режима подтверждения выходного считывателя" newState="askDriver" />
+        <message code="68" type="Normal" priority="10" text="Блокировка" newState="askDriver" />
+        <message code="69" type="Normal" priority="25" text="Разблокировка" newState="askDriver" />
+        <message code="70" type="Normal" priority="4" text="Нормальный режим" newState="askDriver" />
+        <message code="75" type="Normal" priority="4" text="Подтверждение доступа картой при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="76" type="Normal" priority="4" text="Подтверждение доступа картой при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="77" type="Normal" priority="4" text="Ворота приоткрыты" newState="askDriver" />
+        <message code="83" type="Normal" priority="4" text="Ввод PIN1 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="84" type="Normal" priority="4" text="Ввод PIN2 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="85" type="Normal" priority="4" text="Ввод PIN3 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="86" type="Normal" priority="4" text="Ввод PIN4 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="87" type="Normal" priority="4" text="Ввод PIN5 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="88" type="Normal" priority="4" text="Ввод PIN6 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="89" type="Normal" priority="4" text="Ввод PIN7 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="90" type="Normal" priority="4" text="Ввод PIN8 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="91" type="Normal" priority="4" text="Ввод PIN9 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="92" type="Normal" priority="4" text="Ввод PIN10 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="93" type="Normal" priority="4" text="Ввод PIN11 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="94" type="Normal" priority="4" text="Ввод PIN12 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="95" type="Normal" priority="4" text="Ввод PIN13 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="96" type="Normal" priority="4" text="Ввод PIN14 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="97" type="Normal" priority="4" text="Ввод PIN15 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="98" type="Normal" priority="4" text="Ввод PIN16 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="99" type="Normal" priority="4" text="Ввод PIN1 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="100" type="Normal" priority="4" text="Ввод PIN2 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="101" type="Normal" priority="4" text="Ввод PIN3 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="102" type="Normal" priority="4" text="Ввод PIN4 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="103" type="Normal" priority="4" text="Ввод PIN5 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="104" type="Normal" priority="4" text="Ввод PIN6 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="105" type="Normal" priority="4" text="Ввод PIN7 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="106" type="Normal" priority="4" text="Ввод PIN8 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="107" type="Normal" priority="4" text="Ввод PIN9 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="108" type="Normal" priority="4" text="Ввод PIN10 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="109" type="Normal" priority="4" text="Ввод PIN11 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="110" type="Normal" priority="4" text="Ввод PIN12 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="111" type="Normal" priority="4" text="Ввод PIN13 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="112" type="Normal" priority="4" text="Ввод PIN14 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="113" type="Normal" priority="4" text="Ввод PIN15 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="114" type="Normal" priority="4" text="Ввод PIN16 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="119" type="Normal" priority="7" text="Вход с нарушением временной зоны %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="In"/>
+        <message code="120" type="Normal" priority="7" text="Выход с нарушением временной зоны %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="Out"/>
+        <message code="121" type="Normal" priority="7" text="Вход с нарушением зоны доступа %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="In"/>
+        <message code="122" type="Normal" priority="7" text="Выход с нарушением зоны доступа %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="Out"/>
+        <message code="136" type="Normal" priority="5" text="Штатный вход первого %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="137" type="Normal" priority="5" text="Штатный выход последнего %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="138" type="Normal" priority="5" text="Штатный вход первого с заданным УД %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="139" type="Normal" priority="5" text="Штатный выход последнего с заданным УД %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="142" type="Normal" priority="4" text="Удержание ключа/карты вх. сч. %CardNo" newState="askDriver" />
+        <message code="143" type="Normal" priority="4" text="Удержание ключа/карты вых. сч. %CardNo" newState="askDriver" />
+        <message code="144" type="Normal" priority="4" text="Отпускание ключа/карты вх. сч. %CardNo" newState="askDriver" />
+        <message code="145" type="Normal" priority="4" text="Отпускание ключа/карты вых. сч. %CardNo" newState="askDriver" />
+        <message code="148" type="Normal" priority="4" text="Идентификация пользователя (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="149" type="Normal" priority="4" text="Идентификация пользователя (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="150" type="Normal" priority="4" text="Идентификация пользователя WEB (вх. сч.) %CardNo" newState="askDriver" />    
+        <message code="151" type="Normal" priority="4" text="Идентификация пользователя WEB (вых. сч.) %CardNo" newState="askDriver" />  
+        <message code="152" type="Normal" priority="4" text="Восст. связи со считывателем (вх. сч.)" newState="askDriver" />  
+        <message code="153" type="Normal" priority="4" text="Восст. связи со считывателем (вых. сч.)" newState="askDriver" />  
+        <message code="2" type="Trouble" priority="50" text="Вход под принуждением %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="in"/>
+        <message code="4" type="Trouble" priority="50" text="Выход под принуждением %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="out"/>
+        <message code="5" type="Trouble" priority="20" text="Дверь не заперта" newState="askDriver" />
+        <message code="6" type="Trouble" priority="50" text="Взлом" newState="askDriver" />
+        <message code="7" type="Trouble" priority="31" text="Удержание" newState="askDriver" />
+        <message code="12" type="Trouble" priority="50" text="Нарушение зоны доступа при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="13" type="Trouble" priority="45" text="Отказ в доступе на вход - нет прав  %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="14" type="Trouble" priority="45" text="Нарушение временной зоны при входе  %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="15" type="Trouble" priority="45" text="Неизвестная карта при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="16" type="Trouble" priority="45" text="Неизвестный пин-код при входе %PinCode" newState="askDriver" passDirection="in"/>
+        <message code="17" type="Trouble" priority="45" text="Запрет входа - ограничение доступа %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="18" type="Trouble" priority="45" text="Отказ в доступе на вход - блокировка %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="19" type="Trouble" priority="45" text="Неверный пин-код при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="20" type="Trouble" priority="45" text="Отказ в доступе на вход - нет полномочий %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="21" type="Trouble" priority="45" text="Ошибка ввода 2-й карты при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="22" type="Trouble" priority="45" text="Ошибка ввода 3-й карты при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="23" type="Trouble" priority="45" text="Любой отказ в доступе при входе" newState="askDriver" passDirection="in"/>
+        <message code="34" type="Trouble" priority="50" text="Нарушение зоны доступа при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="35" type="Trouble" priority="45" text="Отказ в доступе на выход - нет прав %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="36" type="Trouble" priority="45" text="Нарушение временной зоны при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="37" type="Trouble" priority="45" text="Неизвестная карта при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="38" type="Trouble" priority="45" text="Неизвестный пин-код при выходе %PinCode" newState="askDriver" passDirection="out"/>
+        <message code="39" type="Trouble" priority="45" text="Запрет выхода - ограничение доступа %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="40" type="Trouble" priority="45" text="Отказ в доступе на выход - блокировка %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="41" type="Trouble" priority="45" text="Неверный пин-код при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="42" type="Trouble" priority="45" text="Отказ в доступе на выход - нет полномочий %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="43" type="Trouble" priority="45" text="Ошибка ввода 2-й карты при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="44" type="Trouble" priority="45" text="Ошибка ввода 3-й карты при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="45" type="Trouble" priority="45" text="Любой отказ в доступе при выходе" newState="askDriver" passDirection="out"/>
+        <message code="58" type="Trouble" priority="50" text="Предост. доступа на вход под принуждением %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="59" type="Trouble" priority="50" text="Предост. доступа на выход под принуждением %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="124" type="Trouble" priority="45" text="Просроченная карта при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="125" type="Trouble" priority="45" text="Просроченная карта при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="126" type="Trouble" priority="45" text="Блокированная карта при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="127" type="Trouble" priority="45" text="Блокированная карта при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="154" type="Trouble" priority="45" text="Потеря связи со считывателем(вх. сч.)" newState="askDriver" />  
+        <message code="155" type="Trouble" priority="45" text="Потеря связи со считывателем(вых. сч.)" newState="askDriver" />      
+        <message code="10" type="Fault" priority="40" text="КЗ дверного контакта" newState="askDriver" />
+        <message code="11" type="Fault" priority="40" text="Обрыв дверного контакта" newState="askDriver" />
+        <message code="74" type="Fault" priority="40" text="Неисправность дверного контакта" newState="askDriver" />
+        <message code="146" type="Fault" priority="40" text="Вход не был совершён" newState="askDriver" passDirection="in" />
+        <message code="147" type="Fault" priority="40" text="Выход не был совершён" newState="askDriver" passDirection="out"/>
+    </devType>
+    <devType id="5">
+        <message code="1" type="Normal" priority="4" text="Выключение питания" newState="askDriver" />
+        <message code="2" type="Normal" priority="4" text="Включение питания" newState="askDriver" />
+        <message code="3" type="Normal" priority="4" text="Очистка конфигурации" newState="askDriver" />
+        <message code="5" type="Normal" priority="4" text="Сброс программный" newState="askDriver" />
+        <message code="6" type="Normal" priority="4" text="Сброс аппаратный" newState="askDriver" />
+        <message code="7" type="Normal" priority="4" text="Срабатывание сторожевого таймера" newState="askDriver" />
+        <message code="9" type="Normal" priority="4" text="Восстановление зоны контроля взлома" newState="askDriver" />
+        <message code="11" type="Normal" priority="4" text="Восстановление связи" newState="askDriver" />
+        <message code="13" type="Normal" priority="4" text="Восстановление первичного электропитания" newState="askDriver" />
+        <message code="23" type="Normal" priority="4" text="Сброс антипассбэка" newState="askDriver" />
+        <message code="32" type="Normal" priority="4" text="Инициализация контроллера" newState="askDriver" />
+        <message code="33" type="Normal" priority="4" text="Включение режима MULTIMASTER" newState="askDriver" />
+        <message code="34" type="Normal" priority="4" text="Включение режима MASTER-SLAVE" newState="askDriver" />
+        <message code="35" type="Normal" priority="4" text="Включение режима UDP" newState="askDriver" />
+        <message code="36" type="Normal" priority="4" text="Выключение режима UDP" newState="askDriver" />
+        <message code="38" type="Normal" priority="5" text="Аккумулятор в норме" newState="askDriver" />
+        <message code="39" type="Normal" priority="4" text="Восстановление буфера событий" newState="askDriver" />
+        <message code="42" type="Normal" priority="4" text="Восстановление связи между Elsys-MB и Elsys-IP" newState="askDriver" />
+        <message code="46" type="Normal" priority="4" text="Инициализация карт завершена успешно" newState="askDriver" />
+        <message code="47" type="Normal" priority="4" text="Инициализация карт завершена с ошибками" newState="askDriver" />
+        <message code="48" type="Normal" priority="4" text="Инициализация АПБ завершена успешно" newState="askDriver" />
+        <message code="49" type="Normal" priority="4" text="Инициализация АПБ завершена с ошибками" newState="askDriver" />
+        <message code="50" type="Normal" priority="4" text="Инициализация оборудования завершена успешно" newState="askDriver" />
+        <message code="51" type="Normal" priority="4" text="Инициализация оборудования завершена с ошибками" newState="askDriver" />
+        <message code="52" type="Normal" priority="4" text="Исключён из опроса" newState="askDriver" />
+        <message code="53" type="Normal" priority="4" text="Включён в опрос" newState="askDriver" />
+        <message code="54" type="Normal" priority="4" text="Синхронизация даты и времени" newState="askDriver" />
+		<message code="67" type="Normal" priority="4" text="Восстановление АДЛС1" newState="askDriver" />
+		<message code="68" type="Normal" priority="4" text="Восстановление АДЛС2" newState="askDriver" />
+		<message code="70" type="Normal" priority="4" text="Восстановление кольцевой топологии" newState="askDriver" />
+        <message code="123" type="Normal" priority="4" text="Ошибка в процессе инициализации" newState="askDriver" />
+        <message code="59" type="Normal" priority="4" text="Идентификация пользователя %CardNo" newState="askDriver" />
+        <message code="60" type="Normal" priority="4" text="Постановка на охрану %CardNo" newState="askDriver" />
+        <message code="61" type="Normal" priority="4" text="Снятие с охраны %CardNo" newState="askDriver" />
+        <message code="62" type="Normal" priority="4" text="Идентификация пользователя WEB %CardNo" newState="askDriver" />    
+        <message code="64" type="Normal" priority="4" text="Восстановление связи со считывателем" />
+        <message code="8" type="Trouble" priority="33" text="Взлом корпуса" newState="askDriver" />
+        <message code="24" type="Trouble" priority="50" text="Превышено допустимое количество временных зон" newState="askDriver" />
+        <message code="25" type="Trouble" priority="50" text="Некорректный номер временного блока" newState="askDriver" />
+        <message code="26" type="Trouble" priority="50" text="Превышено допустимое количество уровней доступа" newState="askDriver" />
+        <message code="27" type="Trouble" priority="50" text="Некорректный номер уровня доступа" newState="askDriver" />
+        <message code="28" type="Trouble" priority="50" text="Превышено допустимое количество постоянных карт" newState="askDriver" />
+        <message code="29" type="Trouble" priority="50" text="Превышено допустимое количество временных карт" newState="askDriver" />
+        <message code="58" type="Trouble" priority="45" text="Отказ в доступе - нет полномочий %CardNo" newState="askDriver" />    
+        <message code="4" type="Fault" priority="40" text="Разрушение БД контроллера" newState="askDriver" />
+        <message code="10" type="Fault" priority="35" text="Потеря связи" newState="askDriver" />
+        <message code="12" type="Fault" priority="40" text="Авария первичного электропитания" newState="askDriver" />
+        <message code="37" type="Fault" priority="40" text="Аккумулятор разряжен " newState="askDriver" />
+        <message code="40" type="Fault" priority="40" text="Частичное восстановление буфера событий" newState="askDriver" />
+        <message code="41" type="Fault" priority="35" text="Нет связи между Elsys-MB и Elsys-IP" newState="askDriver" />
+        <message code="43" type="Fault" priority="35" text="Отсутствует модуль расширения памяти" newState="askDriver" />
+        <message code="63" type="Fault" priority="35" text="Потеря связи со считывателем" />
+        <message code="65" type="Fault" priority="35" text="Неисправность АДЛС1" />
+        <message code="66" type="Fault" priority="35" text="Неисправность АДЛС2" />
+        <message code="69" type="Fault" priority="35" text="Нарушение кольцевой топологии" />
+    </devType>
+    <devType id="6">
+        <message code="3" type="Normal" priority="4" text="Норма (готов к взятию на охрану)" newState="askDriver" />
+        <message code="4" type="Normal" priority="4" text="Неготовность шлейфа" newState="askDriver" />    
+        <message code="5" type="Normal" priority="5" text="На охране" newState="askDriver" />
+        <message code="9" type="Normal" priority="4" text="Снятие с охраны" newState="askDriver" />
+        <message code="11" type="Normal" priority="7" text="Задержка взятия" newState="askDriver" />
+        <message code="15" type="Normal" priority="4" text="Восстановление зоны контроля взлома" newState="askDriver" />  
+        <message code="17" type="Normal" priority="4" text="Восстановление связи" newState="askDriver" />    
+        <message code="6" type="Trouble" priority="50" text="Тревога" newState="askDriver" />
+        <message code="7" type="Trouble" priority="31" text="Удержание" newState="askDriver" />
+        <message code="13" type="Trouble" priority="50" text="Задержка тревоги" newState="askDriver" />
+        <message code="14" type="Trouble" priority="33" text="Взлом корпуса" newState="askDriver" />    
+        <message code="1" type="Fault" priority="40" text="Обрыв" newState="askDriver" />
+        <message code="2" type="Fault" priority="40" text="Короткое замыкание" newState="askDriver" />
+        <message code="8" type="Fault" priority="40" text="Невзятие на охрану" newState="askDriver" />
+        <message code="10" type="Fault" priority="40" text="Неисправность" newState="askDriver" />
+        <message code="12" type="Fault" priority="8" text="Задержка взятия - неготовность" newState="askDriver" />
+        <message code="16" type="Fault" priority="35" text="Потеря связи" newState="askDriver" />
+        <message code="18" type="Fault" priority="35" text="Ошибка конфигурации" newState="askDriver" />
+    </devType>
+    <devType id="10">
+        <message code="1" type="Normal" priority="4" text="Включение" newState="31" />
+        <message code="2" type="Normal" priority="4" text="Выключение" newState="32" />
+        <message code="3" type="Normal" priority="4" text="Окончание работы по формуле" newState="32" />
+        <message code="4" type="Normal" priority="4" text="Включение по формуле" newState="31" />  
+        <message code="6" type="Normal" priority="4" text="Восстановление зоны контроля взлома" newState="askDriver" />    
+        <message code="8" type="Normal" priority="4" text="Восстановление связи" newState="askDriver" />    
+        <message code="5" type="Trouble" priority="33" text="Взлом корпуса" newState="askDriver" />
+        <message code="7" type="Fault" priority="35" text="Потеря связи" newState="askDriver" />
+        <message code="9" type="Fault" priority="35" text="Ошибка конфигурации" newState="askDriver" />
+    </devType>
+    <devType id="12">
+        <message code="3" type="Normal" priority="4" text="Норма (готов к взятию на охрану)" newState="askDriver" />
+        <message code="4" type="Normal" priority="4" text="Неготовность шлейфа" newState="askDriver" />    
+        <message code="5" type="Normal" priority="5" text="На охране" newState="askDriver" />
+        <message code="9" type="Normal" priority="4" text="Снятие с охраны" newState="askDriver" />
+        <message code="11" type="Normal" priority="7" text="Задержка взятия" newState="askDriver" />
+        <message code="15" type="Normal" priority="4" text="Восстановление зоны контроля взлома" newState="askDriver" />
+        <message code="17" type="Normal" priority="4" text="Восстановление связи" newState="askDriver" />  
+        <message code="6" type="Trouble" priority="50" text="Тревога" newState="askDriver" />
+        <message code="7" type="Trouble" priority="31" text="Удержание" newState="askDriver" />
+        <message code="13" type="Trouble" priority="50" text="Задержка тревоги" newState="askDriver" />
+        <message code="14" type="Trouble" priority="33" text="Взлом корпуса" newState="askDriver" />    
+        <message code="1" type="Fault" priority="40" text="Обрыв" newState="askDriver" />
+        <message code="2" type="Fault" priority="40" text="Короткое замыкание" newState="askDriver" />
+        <message code="8" type="Fault" priority="40" text="Невзятие на охрану" newState="askDriver" />
+        <message code="10" type="Fault" priority="40" text="Неисправность" newState="askDriver" />
+        <message code="12" type="Fault" priority="8" text="Задержка взятия - неготовность" newState="askDriver" />
+        <message code="16" type="Fault" priority="35" text="Потеря связи" newState="askDriver" />
+        <message code="18" type="Fault" priority="35" text="Ошибка конфигурации" newState="askDriver" />
+    </devType>
+    <devType id="13">
+        <message code="1" type="Normal" priority="5" text="Взятие на охрану %CardNo" newState="askDriver" />
+        <message code="2" type="Normal" priority="4" text="Снятие с охраны %CardNo" newState="askDriver" />
+        <message code="3" type="Normal" priority="41" text="Невзятие на охрану %CardNo" newState="askDriver" />
+        <message code="4" type="Normal" priority="7" text="Взятие на охрану с задержкой" newState="askDriver" />
+        <message code="8" type="Normal" priority="4" text="Частично на охране" newState="askDriver" />
+        <message code="9" type="Normal" priority="5" text="Запрос на взятие %CardNo" newState="askDriver" />
+        <message code="10" type="Normal" priority="4" text="Запрос на снятие %CardNo" newState="askDriver" />
+        <message code="13" type="Normal" priority="4" text="Недоступно для управления %CardNo" newState="askDriver" />
+        <message code="14" type="Normal" priority="4" text="Нет полномочий для взятия на охрану %CardNo" newState="askDriver" />
+        <message code="15" type="Normal" priority="4" text="Нет полномочий для снятия с охраны %CardNo" newState="askDriver" />
+        <message code="16" type="Normal" priority="5" text="Взятие на охрану пользователем %CardNo" newState="askDriver" />
+        <message code="17" type="Normal" priority="4" text="Снятие с охраны пользователем %CardNo" newState="askDriver" />
+        <message code="18" type="Normal" priority="40" text="Невзятие на охрану пользователем %CardNo" newState="askDriver" />  
+        <message code="5" type="Trouble" priority="31" text="Тревога входной зоны" newState="askDriver" />
+        <message code="6" type="Trouble" priority="50" text="Тревога" newState="askDriver" />
+        <message code="7" type="Fault" priority="40" text="Неисправность" newState="askDriver" />
+        <message code="11" type="Fault" priority="40" text="Неисправность при взятии %CardNo" newState="askDriver" />
+        <message code="12" type="Fault" priority="40" text="Неисправность при снятии %CardNo" newState="askDriver" />
+    </devType>
+    <devType id="19">
+        <message code="501" type="Normal" priority="4" text="Восстановление связи" newState="askDriver" />
+        <message code="506" type="Trouble" priority="50" text="Идентификация под принуждением %CardNo" newState="askDriver" />
+        <message code="507" type="Trouble" priority="33" text="Взлом корпуса" newState="askDriver" />
+        <message code="500" type="Fault" priority="35" text="Потеря связи" newState="askDriver" />
+        <message code="502" type="Fault" priority="35" text="Несовпадение типов" newState="askDriver" />
+        <message code="503" type="Fault" priority="35" text="Запись карты" newState="askDriver" />
+        <message code="504" type="Fault" priority="35" text="Удаление карты" newState="askDriver" />
+        <message code="505" type="Fault" priority="35" text="Удаление сигнатуры" newState="askDriver" />
+        <message code="508" type="Fault" priority="35" text="Отсутствует лицензия" newState="askDriver" />
+        <message code="509" type="Normal" priority="4" text="Запущена полная инициализация" newState="askDriver" />
+        <message code="510" type="Normal" priority="4" text="Инициализация завершена успешно" newState="askDriver" />
+        <message code="511" type="Fault" priority="35" text="Инициализация завершена с ошибками" newState="askDriver" />
+        <message code="512" type="Normal" priority="4" text="Инициализация прервана" newState="askDriver" />
+        <message code="513" type="Normal" priority="4" text="Проверка конфигурации: нет ошибок" newState="askDriver" />
+        <message code="514" type="Fault" priority="35" text="Проверка конфигурации: выявлены ошибки" newState="askDriver" />
+        <message code="515" type="Normal" priority="4" text="Корпус закрыт" newState="askDriver" />
+        <message code="516" type="Normal" priority="4" text="Сетевое питание в норме" newState="askDriver" />
+        <message code="517" type="Fault" priority="35" text="Сетевое питание отключено" newState="askDriver" />
+        <message code="518" type="Normal" priority="4" text="Аккумулятор в норме" newState="askDriver" />
+        <message code="519" type="Fault" priority="35" text="Аккумулятор разряжен" newState="askDriver" />
+    </devType>
+    <devType id="21">
+        <message code="3" type="Normal" priority="4" text="Норма (готов к взятию на охрану)" newState="askDriver" />
+        <message code="4" type="Normal" priority="4" text="Неготовность шлейфа" newState="askDriver" />        
+        <message code="5" type="Normal" priority="5" text="На охране" newState="askDriver" />
+        <message code="9" type="Normal" priority="4" text="Снятие с охраны" newState="askDriver" />
+        <message code="11" type="Normal" priority="7" text="Задержка взятия" newState="askDriver" />
+        <message code="15" type="Normal" priority="4" text="Восстановление зоны контроля взлома" newState="askDriver" />    
+        <message code="17" type="Normal" priority="4" text="Восстановление связи" newState="askDriver" />    
+        <message code="6" type="Trouble" priority="50" text="Тревога" newState="askDriver" />
+        <message code="7" type="Trouble" priority="31" text="Удержание" newState="askDriver" />
+        <message code="13" type="Trouble" priority="50" text="Задержка тревоги" newState="askDriver" />
+        <message code="14" type="Trouble" priority="33" text="Взлом корпуса" newState="askDriver" />  
+        <message code="1" type="Fault" priority="40" text="Обрыв" newState="askDriver" />
+        <message code="2" type="Fault" priority="40" text="Короткое замыкание" newState="askDriver" />
+        <message code="8" type="Fault" priority="40" text="Невзятие на охрану" newState="askDriver" />
+        <message code="10" type="Fault" priority="40" text="Неисправность" newState="askDriver" />
+        <message code="12" type="Fault" priority="8" text="Задержка взятия - неготовность" newState="askDriver" />
+        <message code="16" type="Fault" priority="35" text="Потеря связи" newState="askDriver" />
+        <message code="18" type="Fault" priority="35" text="Ошибка конфигурации" newState="askDriver" />
+    </devType>
+    <devType id="22">
+        <message code="1" type="Normal" priority="5" text="Штатный вход %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="in"/>
+        <message code="3" type="Normal" priority="5" text="Штатный выход %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="out"/>
+        <message code="8" type="Normal" priority="4" text="Турникет закрыт" newState="askDriver" />
+        <message code="9" type="Normal" priority="4" text="Открывание турникета" newState="askDriver" />
+        <message code="24" type="Normal" priority="4" text="Предъявлена первая карта при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="25" type="Normal" priority="4" text="Предъявлена вторая карта при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="26" type="Normal" priority="4" text="Предъявлена третья карта при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="27" type="Normal" priority="4" text="Действие 1 (входной считыватель) %CardNo" newState="askDriver" />
+        <message code="28" type="Normal" priority="4" text="Действие 2 (входной считыватель) %CardNo" newState="askDriver" />
+        <message code="29" type="Normal" priority="4" text="Действие 3 (входной считыватель) %CardNo" newState="askDriver" />
+        <message code="30" type="Normal" priority="4" text="Постановка на охрану вх. считывателем %CardNo" newState="askDriver" />
+        <message code="31" type="Normal" priority="4" text="Снятие с охраны вх. считывателем %CardNo" newState="askDriver" />
+        <message code="32" type="Normal" priority="4" text="Предоставление доступа на вход по кнопке" newState="askDriver" passDirection="in"/>
+        <message code="33" type="Normal" priority="4" text="Фактический вход по кнопке" newState="askDriver" passDirection="in"/>
+        <message code="46" type="Normal" priority="4" text="Предъявлена первая карта при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="47" type="Normal" priority="4" text="Предъявлена вторая карта при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="48" type="Normal" priority="4" text="Предъявлена третья карта при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="49" type="Normal" priority="4" text="Действие 1 (выходной считыватель) %CardNo" newState="askDriver" />
+        <message code="50" type="Normal" priority="4" text="Действие 2 (выходной считыватель) %CardNo" newState="askDriver" />
+        <message code="51" type="Normal" priority="4" text="Действие 3 (выходной считыватель) %CardNo" newState="askDriver" />
+        <message code="52" type="Normal" priority="4" text="Постановка на охрану вых. считывателем %CardNo" newState="askDriver" />
+        <message code="53" type="Normal" priority="4" text="Снятие с охраны вых. считывателем %CardNo" newState="askDriver" />
+        <message code="54" type="Normal" priority="4" text="Предоставление доступа на выход по кнопке" newState="askDriver" passDirection="out"/>
+        <message code="55" type="Normal" priority="4" text="Фактический выход по кнопке" newState="askDriver" passDirection="out"/>
+        <message code="56" type="Normal" priority="4" text="Предоставление доступа на вход %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="57" type="Normal" priority="4" text="Предоставление доступа на выход %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="60" type="Normal" priority="4" text="Требуется подтверждение доступа при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="61" type="Normal" priority="4" text="Требуется подтверждение доступа при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="62" type="Normal" priority="4" text="Подтв. доступа на вход оператором %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="63" type="Normal" priority="4" text="Подтв. доступа на выход оператором %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="64" type="Normal" priority="46" text="Отказ в доступе на вход оператором %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="65" type="Normal" priority="46" text="Отказ в доступе на выход оператором %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="66" type="Normal" priority="4" text="Сброс режима подтверждения входного считывателя" newState="askDriver" />
+        <message code="67" type="Normal" priority="4" text="Сброс режима подтверждения выходного считывателя" newState="askDriver" />
+        <message code="68" type="Normal" priority="10" text="Блокировка (вход)" newState="askDriver" />
+        <message code="69" type="Normal" priority="25" text="Разблокировка (вход)" newState="askDriver" />
+        <message code="70" type="Normal" priority="4" text="Нормальный режим (вход)" newState="askDriver" />
+        <message code="71" type="Normal" priority="10" text="Блокировка (выход)" newState="askDriver" />
+        <message code="72" type="Normal" priority="25" text="Разблокировка (выход)" newState="askDriver" />
+        <message code="73" type="Normal" priority="4" text="Нормальный режим (выход)" newState="askDriver" />
+        <message code="75" type="Normal" priority="4" text="Подтверждение доступа картой при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="76" type="Normal" priority="4" text="Подтверждение доступа картой при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="83" type="Normal" priority="4" text="Ввод PIN1 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="84" type="Normal" priority="4" text="Ввод PIN2 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="85" type="Normal" priority="4" text="Ввод PIN3 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="86" type="Normal" priority="4" text="Ввод PIN4 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="87" type="Normal" priority="4" text="Ввод PIN5 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="88" type="Normal" priority="4" text="Ввод PIN6 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="89" type="Normal" priority="4" text="Ввод PIN7 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="90" type="Normal" priority="4" text="Ввод PIN8 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="91" type="Normal" priority="4" text="Ввод PIN9 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="92" type="Normal" priority="4" text="Ввод PIN10 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="93" type="Normal" priority="4" text="Ввод PIN11 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="94" type="Normal" priority="4" text="Ввод PIN12 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="95" type="Normal" priority="4" text="Ввод PIN13 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="96" type="Normal" priority="4" text="Ввод PIN14 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="97" type="Normal" priority="4" text="Ввод PIN15 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="98" type="Normal" priority="4" text="Ввод PIN16 + PROX (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="99" type="Normal" priority="4" text="Ввод PIN1 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="100" type="Normal" priority="4" text="Ввод PIN2 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="101" type="Normal" priority="4" text="Ввод PIN3 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="102" type="Normal" priority="4" text="Ввод PIN4 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="103" type="Normal" priority="4" text="Ввод PIN5 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="104" type="Normal" priority="4" text="Ввод PIN6 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="105" type="Normal" priority="4" text="Ввод PIN7 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="106" type="Normal" priority="4" text="Ввод PIN8 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="107" type="Normal" priority="4" text="Ввод PIN9 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="108" type="Normal" priority="4" text="Ввод PIN10 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="109" type="Normal" priority="4" text="Ввод PIN11 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="110" type="Normal" priority="4" text="Ввод PIN12 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="111" type="Normal" priority="4" text="Ввод PIN13 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="112" type="Normal" priority="4" text="Ввод PIN14 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="113" type="Normal" priority="4" text="Ввод PIN15 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="114" type="Normal" priority="4" text="Ввод PIN16 + PROX (вых. сч.) %CardNo" newState="askDriver" />
+        <message code="119" type="Normal" priority="7" text="Вход с нарушением временной зоны %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="In"/>
+        <message code="120" type="Normal" priority="7" text="Выход с нарушением временной зоны %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="Out"/>
+        <message code="121" type="Normal" priority="7" text="Вход с нарушением зоны доступа %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="In"/>
+        <message code="122" type="Normal" priority="7" text="Выход с нарушением зоны доступа %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="Out"/>
+        <message code="136" type="Normal" priority="5" text="Штатный вход первого %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="137" type="Normal" priority="5" text="Штатный выход последнего %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="138" type="Normal" priority="5" text="Штатный вход первого с заданным УД %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="139" type="Normal" priority="5" text="Штатный выход последнего с заданным УД %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="142" type="Normal" priority="4" text="Удержание ключа/карты вх. сч. %CardNo" newState="askDriver" />
+        <message code="143" type="Normal" priority="4" text="Удержание ключа/карты вых. сч. %CardNo" newState="askDriver" />
+        <message code="144" type="Normal" priority="4" text="Отпускание ключа/карты вх. сч. %CardNo" newState="askDriver" />
+        <message code="145" type="Normal" priority="4" text="Отпускание ключа/карты вых. сч. %CardNo" newState="askDriver" />
+        <message code="148" type="Normal" priority="4" text="Идентификация пользователя (вх. сч.) %CardNo" newState="askDriver" />
+        <message code="149" type="Normal" priority="4" text="Идентификация пользователя (вых. сч.) %CardNo" newState="askDriver" />    
+        <message code="150" type="Normal" priority="4" text="Идентификация пользователя WEB (вх. сч.) %CardNo" newState="askDriver" />    
+        <message code="151" type="Normal" priority="4" text="Идентификация пользователя WEB (вых. сч.) %CardNo" newState="askDriver" />    
+        <message code="152" type="Normal" priority="4" text="Восст. связи со считывателем (вх. сч.)" newState="askDriver" />  
+        <message code="153" type="Normal" priority="4" text="Восст. связи со считывателем (вых. сч.)" newState="askDriver" />  
+        <message code="2" type="Trouble" priority="50" text="Вход под принуждением %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="In"/>
+        <message code="4" type="Trouble" priority="50" text="Выход под принуждением %CardNo" newState="askDriver" useInCtrlAreas="true" passDirection="Out"/>
+        <message code="5" type="Trouble" priority="20" text="Дверь не заперта" newState="askDriver" />
+        <message code="6" type="Trouble" priority="50" text="Взлом" newState="askDriver" />
+        <message code="7" type="Trouble" priority="31" text="Удержание" newState="askDriver" />
+        <message code="12" type="Trouble" priority="50" text="Нарушение зоны доступа при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="13" type="Trouble" priority="45" text="Отказ в доступе на вход - нет прав  %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="14" type="Trouble" priority="45" text="Нарушение временной зоны при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="15" type="Trouble" priority="45" text="Неизвестная карта при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="16" type="Trouble" priority="45" text="Неизвестный пин-код при входе %PinCode" newState="askDriver" passDirection="in"/>
+        <message code="17" type="Trouble" priority="45" text="Запрет входа - ограничение доступа %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="18" type="Trouble" priority="45" text="Отказ в доступе на вход - блокировка %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="19" type="Trouble" priority="45" text="Неверный пин-код при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="20" type="Trouble" priority="45" text="Отказ в доступе на вход - нет полномочий %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="21" type="Trouble" priority="45" text="Ошибка ввода 2-й карты при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="22" type="Trouble" priority="45" text="Ошибка ввода 3-й карты при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="23" type="Trouble" priority="45" text="Любой отказ в доступе при входе" newState="askDriver" passDirection="in"/>
+        <message code="34" type="Trouble" priority="50" text="Нарушение зоны доступа при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="35" type="Trouble" priority="45" text="Отказ в доступе на выход - нет прав  %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="36" type="Trouble" priority="45" text="Нарушение временной зоны при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="37" type="Trouble" priority="45" text="Неизвестная карта при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="38" type="Trouble" priority="45" text="Неизвестный пин-код при выходе %PinCode" newState="askDriver" passDirection="out"/>
+        <message code="39" type="Trouble" priority="45" text="Запрет выхода - ограничение доступа %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="40" type="Trouble" priority="45" text="Отказ в доступе на выход - блокировка %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="41" type="Trouble" priority="45" text="Неверный пин-код при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="42" type="Trouble" priority="45" text="Отказ в доступе на выход- нет полномочий %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="43" type="Trouble" priority="45" text="Ошибка ввода 2-й карты при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="44" type="Trouble" priority="45" text="Ошибка ввода 3-й карты при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="45" type="Trouble" priority="45" text="Любой отказ в доступе при выходе" newState="askDriver" passDirection="out"/>
+        <message code="58" type="Trouble" priority="50" text="Предост. доступа на вход под принуждением %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="59" type="Trouble" priority="50" text="Предост. доступа на выход под принуждением %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="124" type="Trouble" priority="45" text="Просроченная карта при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="125" type="Trouble" priority="45" text="Просроченная карта при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="126" type="Trouble" priority="45" text="Блокированная карта при входе %CardNo" newState="askDriver" passDirection="in"/>
+        <message code="127" type="Trouble" priority="45" text="Блокированная карта при выходе %CardNo" newState="askDriver" passDirection="out"/>
+        <message code="154" type="Trouble" priority="45" text="Потеря связи со считывателем(вх. сч.)" newState="askDriver" />  
+        <message code="155" type="Trouble" priority="45" text="Потеря связи со считывателем(вых. сч.)" newState="askDriver" />          
+        <message code="10" type="Fault" priority="40" text="КЗ дверного контакта" newState="askDriver" />
+        <message code="11" type="Fault" priority="40" text="Обрыв дверного контакта" newState="askDriver" />
+        <message code="74" type="Fault" priority="40" text="Неисправность дверного контакта" newState="askDriver" />
+        <message code="146" type="Fault" priority="40" text="Вход не был совершён" newState="askDriver" passDirection="in"/>
+        <message code="147" type="Fault" priority="40" text="Выход не был совершён" newState="askDriver" passDirection="out"/>
+    </devType>
+    <devType id="27">
+        <message code="1" type="Normal" priority="5" text="Взятие на охрану %CardNo" newState="askDriver" />
+        <message code="2" type="Normal" priority="4" text="Снятие с охраны %CardNo" newState="askDriver" />   
+        <message code="3" type="Normal" priority="40" text="Невзятие на охрану %CardNo" newState="askDriver" />      
+        <message code="4" type="Normal" priority="7" text="Взятие на охрану с задержкой" newState="askDriver" />     
+        <message code="8" type="Normal" priority="4" text="Частично на охране" newState="askDriver" />                  
+        <message code="9" type="Normal" priority="5" text="Запрос на взятие %CardNo" newState="askDriver" />                  
+        <message code="10" type="Normal" priority="4" text="Запрос на снятие %CardNo" newState="askDriver" />                       
+        <message code="13" type="Normal" priority="4" text="Недоступно для управления %CardNo" newState="askDriver" />                            
+        <message code="14" type="Normal" priority="4" text="Нет полномочий для взятия на охрану %CardNo" newState="askDriver" />                                 
+        <message code="15" type="Normal" priority="4" text="Нет полномочий для снятия с охраны %CardNo" newState="askDriver" />        
+        <message code="5" type="Trouble" priority="30" text="Тревога входной зоны" newState="askDriver" />   
+        <message code="6" type="Trouble" priority="50" text="Тревога" newState="askDriver" />        
+        <message code="7" type="Fault" priority="40" text="Неисправность" newState="askDriver" />             
+        <message code="11" type="Fault" priority="40" text="Неисправность при взятии %CardNo" newState="askDriver" />                            
+        <message code="12" type="Fault" priority="40" text="Неисправность при снятии %CardNo" newState="askDriver" />                            
+     </devType>
+    <devType id="28">
+        <message code="1" type="Normal" priority="4" text="Выключение питания" newState="askDriver" />
+        <message code="2" type="Normal" priority="4" text="Включение питания" newState="askDriver" />
+        <message code="5" type="Normal" priority="4" text="Сброс программный" newState="askDriver" />
+        <message code="6" type="Normal" priority="4" text="Сброс аппаратный" newState="askDriver" />
+        <message code="7" type="Normal" priority="4" text="Срабатывание сторожевого таймера" newState="askDriver" />
+        <message code="9" type="Normal" priority="4" text="Восстановление зоны контроля взлома" newState="askDriver" />
+        <message code="11" type="Normal" priority="4" text="Восстановление связи" newState="askDriver" />
+        <message code="32" type="Normal" priority="4" text="Инициализация контроллера" newState="askDriver" />
+        <message code="33" type="Normal" priority="4" text="Включение режима MULTIMASTER" newState="askDriver" />
+        <message code="34" type="Normal" priority="4" text="Включение режима MASTER-SLAVE" newState="askDriver" />
+        <message code="35" type="Normal" priority="4" text="Включение режима UDP" newState="askDriver" />
+        <message code="36" type="Normal" priority="4" text="Выключение режима UDP" newState="askDriver" />
+        <message code="44" type="Normal" priority="4" text="Обмен данными в СГ включен" newState="askDriver" />
+        <message code="45" type="Normal" priority="4" text="Обмен данными в СГ выключен" newState="askDriver" />
+        <message code="46" type="Normal" priority="4" text="Инициализация карт завершена успешно" newState="askDriver" />
+        <message code="47" type="Normal" priority="4" text="Инициализация карт завершена с ошибками" newState="askDriver" />
+        <message code="48" type="Normal" priority="4" text="Инициализация АПБ завершена успешно" newState="askDriver" />
+        <message code="49" type="Normal" priority="4" text="Инициализация АПБ завершена с ошибками" newState="askDriver" />
+        <message code="52" type="Normal" priority="4" text="Исключён из опроса" newState="askDriver" />
+        <message code="53" type="Normal" priority="4" text="Включён в опрос" newState="askDriver" />
+        <message code="54" type="Normal" priority="4" text="Синхронизация даты и времени" newState="askDriver" />
+        <message code="123" type="Normal" priority="4" text="Ошибка в процессе инициализации" newState="askDriver" />
+        <message code="50" type="Normal" priority="4" text="Инициализация настроек ОПС завершена успешно" newState="askDriver" />
+        <message code="51" type="Normal" priority="4" text="Инициализация настроек ОПС завершена с ошибками" newState="askDriver" />
+        <message code="8" type="Trouble" priority="33" text="Взлом корпуса" newState="askDriver" />
+        <message code="4" type="Fault" priority="40" text="Разрушение БД контроллера" newState="askDriver" />
+        <message code="10" type="Fault" priority="35" text="Потеря связи" newState="askDriver" />
+    </devType>
+</ElsysEvents>
