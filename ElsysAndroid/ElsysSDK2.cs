@@ -3,7 +3,6 @@ using System.Linq;
 using System.Text;
 using System.Security.Cryptography;
 using System.Xml.Linq;
-using System.IO;
 using Android.Content.Res;
 
 namespace ElsysSDK2

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Xml.Linq;
 using Android.App;
 using Android.OS;
@@ -13,6 +14,7 @@ namespace ElsysAndroid
     public class MainActivity : AppCompatActivity
     {
         private TPollTask PollTask;
+        private XDocument aDevTree;
 
         private string configFolder = "Configs";
         private string configFile = "Configs/ElsysConfig.xml";
@@ -34,6 +36,7 @@ namespace ElsysAndroid
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
             FindViewById<Button>(Resource.Id.start_button).Click += Start;
+            FindViewById<Button>(Resource.Id.impulse_button).Click += Impulse;
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -53,6 +56,17 @@ namespace ElsysAndroid
             return base.OnOptionsItemSelected(item);
         }
 
+        private void SendCommand(int aID, int aDevtype, int aCommand)
+        {
+            PollTask.SendCommand(aID, aDevtype, aCommand);
+        }
+
+        private void Impulse(object sender, EventArgs eventArgs)
+        {
+            var Outs = aDevTree.Root.Descendants("Outs").Elements("Out").ToList();
+            SendCommand(int.Parse(Outs[0].Element("ID").Value), HWConfig.ElsysConfig.DevTypes.dtOut, ElsysSDK2.ElsysCommands.Outs.Impulse);
+        }
+
         private void Start(object sender, EventArgs eventArgs)
         {
             try
@@ -67,6 +81,7 @@ namespace ElsysAndroid
                     //miInit.Enabled = true;
                     //tbClear.Enabled = true;
                     //LoadListsForControl(DevTree, mbnetOPSConfig);
+                    aDevTree = DevTree;
                 }
                 else
                 {

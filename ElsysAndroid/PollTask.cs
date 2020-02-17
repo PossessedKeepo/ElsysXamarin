@@ -10,6 +10,7 @@ using System.IO;
 using ElsysSDK2;
 using HWConfig;
 using Android.Content.Res;
+using System.Diagnostics;
 
 namespace DutyPoll
 {
@@ -230,7 +231,7 @@ namespace DutyPoll
                     PrepareDevTreeItems();
                     PrepareCommandData();
                     PrepareCommandTotalCounter();
-                    OnInit(0);
+                    OnInit?.Invoke(0);
                 }
             }
         }
@@ -251,7 +252,7 @@ namespace DutyPoll
                     PrepareDeviceChangeItems();
                     PrepareCommandData();
                     PrepareCommandTotalCounter();
-                    OnInit(0);
+                    OnInit?.Invoke(0);
                 }
             }
         }
@@ -279,7 +280,7 @@ namespace DutyPoll
                     PrepareAPBChangesItems();
                     PrepareCommandTotalCounter();
                     PrepareCommandData();
-                    OnInit(0);
+                    OnInit?.Invoke(0);
                 }
             }
         }
@@ -298,7 +299,7 @@ namespace DutyPoll
                     PrepareAPBChangesItems();
                     PrepareCommandTotalCounter();
                     PrepareCommandData();
-                    OnInit(0);
+                    OnInit?.Invoke(0);
                 }
             }
         }
@@ -527,7 +528,7 @@ namespace DutyPoll
                 HTTPClient.Dispose();
             }
 
-            OnTerminate();
+            OnTerminate?.Invoke();
         }
 
         private void NextPoll()
@@ -569,7 +570,7 @@ namespace DutyPoll
 
             if (Math.Abs(TimeCorrection.TotalSeconds) > 5)
             {
-                OnMessage("Синхронизация времени", "");
+                OnMessage?.Invoke("Синхронизация времени", "");
                 XContent = Protocol.GetXContent(IncCID(), SID, now);
             }
             else
@@ -621,10 +622,10 @@ namespace DutyPoll
             {
                 if ((aConfigGUID == "") || (aConfigGUID != ConfigGUID))
                 {
-                    if (aConfigGUID == "") OnMessage("Конфигурация SDK отсутствует!", "");
+                    if (aConfigGUID == "") OnMessage?.Invoke("Конфигурация SDK отсутствует!", "");
 
                     if ((aConfigGUID) != ConfigGUID)
-                        OnMessage("Необходимо выполнить инициализацию!", "");
+                        OnMessage?.Invoke("Необходимо выполнить инициализацию!", "");
 
                     NeedInit = true;
                 }
@@ -645,8 +646,12 @@ namespace DutyPoll
                 }
 
                 HTTPResponse = await HTTPClient.PostAsync(RequestUri, new ByteArrayContent(Content), CancelTokenSource.Token);
+                if (HTTPResponse.Content.Headers.TryGetValues("Content-Length", out IEnumerable<string> values) && values.Count() == 1 && !values.First().Equals("732") && !values.First().Equals("961") && !values.First().Equals("199"))
+                {
+                    Debug.WriteLine(HTTPResponse.ToString());
+                }
             }
-            catch
+            catch (Exception e)
             {
                 HTTPResponse = null;
             }
@@ -656,7 +661,7 @@ namespace DutyPoll
 
         private void HandleError(string aError)
         {
-            OnMessage(string.Format("Ошибка протокола обмена: {0}", aError), "");
+            OnMessage?.Invoke(string.Format("Ошибка протокола обмена: {0}", aError), "");
         }
 
         //todo процедура только для отладки
@@ -1440,26 +1445,26 @@ namespace DutyPoll
                 if ((int.Parse(aInitResponce.Element("CmdNo").Value) != InitData.CommandID) ||
                     (bool.Parse(aInitResponce.Element("Result").Value) == false))
                 {
-                    OnMessage("Инициализация завершена с ошибкой", "");
+                    OnMessage?.Invoke("Инициализация завершена с ошибкой", "");
                     TimeSpan timeSpan = DateTime.Now - BeginInitTime;
-                    OnMessage(string.Format("Время инициализации: {0}", timeSpan.ToString()), "");
+                    OnMessage?.Invoke(string.Format("Время инициализации: {0}", timeSpan.ToString()), "");
 
                     InitData.InitState = TInitState.istNone;
-                    OnInit(100);
+                    OnInit?.Invoke(100);
                 }
                 else
                 if (InitData.CommandID < InitData.CommandCount)
                 {
-                    OnInit((InitData.CommandID * 100) / InitData.CommandCount);
+                    OnInit?.Invoke((InitData.CommandID * 100) / InitData.CommandCount);
                 }
                 else
                 {
-                    OnMessage("Успешное завершение инициализации", "");
+                    OnMessage?.Invoke("Успешное завершение инициализации", "");
                     TimeSpan timeSpan = DateTime.Now - BeginInitTime;
-                    OnMessage(string.Format("Время инициализации: {0}", timeSpan.ToString()), "");
+                    OnMessage?.Invoke(string.Format("Время инициализации: {0}", timeSpan.ToString()), "");
                     InitData.InitState = TInitState.istNone;
                     LoadDevList(InitData.DevTree, InitData.OPSConfig);
-                    OnInit(100);
+                    OnInit?.Invoke(100);
                     NeedInit = false;
                 }
             }
@@ -1472,17 +1477,17 @@ namespace DutyPoll
                 if ((int.Parse(aInitResponce.Element("CmdNo").Value) != InitData.TotalCommandID) ||
                     (bool.Parse(aInitResponce.Element("Result").Value) == false))
                 {
-                    OnMessage("Инициализация завершена с ошибкой", "");
+                    OnMessage?.Invoke("Инициализация завершена с ошибкой", "");
                     TimeSpan timeSpan = DateTime.Now - BeginInitTime;
-                    OnMessage(string.Format("Время инициализации: {0}", timeSpan.ToString()), "");
+                    OnMessage?.Invoke(string.Format("Время инициализации: {0}", timeSpan.ToString()), "");
 
                     InitData.InitState = TInitState.istNone;
-                    OnInit(100);
+                    OnInit?.Invoke(100);
                 }
                 else
               if (InitData.TotalCommandID < InitData.TotalCommandCount)
                 {
-                    OnInit((InitData.TotalCommandID * 100) / InitData.TotalCommandCount);
+                    OnInit?.Invoke((InitData.TotalCommandID * 100) / InitData.TotalCommandCount);
 
                     lock (InitData)
                     {
@@ -1495,11 +1500,11 @@ namespace DutyPoll
                 }
                 else
                 {
-                    OnMessage("Успешное завершение инициализации", "");
+                    OnMessage?.Invoke("Успешное завершение инициализации", "");
                     TimeSpan timeSpan = DateTime.Now - BeginInitTime;
-                    OnMessage(string.Format("Время инициализации: {0}", timeSpan.ToString()), "");
+                    OnMessage?.Invoke(string.Format("Время инициализации: {0}", timeSpan.ToString()), "");
                     InitData.InitState = TInitState.istNone;
-                    OnInit(100);
+                    OnInit?.Invoke(100);
                 }
             }
         }
@@ -1534,7 +1539,7 @@ namespace DutyPoll
                                     (InitData.InitState == TInitState.istFinished)
                                     )
                                 {
-                                    OnMessage("Инициализация завершена с ошибкой", "");
+                                    OnMessage?.Invoke("Инициализация завершена с ошибкой", "");
                                     InitData.InitState = TInitState.istNone;
                                 }
                             }
@@ -1547,12 +1552,12 @@ namespace DutyPoll
                                 {
                                     if (InitData.InitState == TInitState.istFinished)
                                     {
-                                        OnMessage("Успешное завершение инициализации", "");
+                                        OnMessage?.Invoke("Успешное завершение инициализации", "");
                                         TimeSpan timeSpan = DateTime.Now - BeginInitTime;
-                                        OnMessage(string.Format("Время инициализации: {0}", timeSpan.ToString()), "");
+                                        OnMessage?.Invoke(string.Format("Время инициализации: {0}", timeSpan.ToString()), "");
                                         UpdateOPSConfig(InitData.MBNetOPSConfigNew, InitData.MBOPSConfigNew);
                                         UpdateUserConfig();
-                                        OnInit(100);
+                                        OnInit?.Invoke(100);
                                         InitData.InitState = TInitState.istNone;
 
                                     }
@@ -1584,7 +1589,7 @@ namespace DutyPoll
             {
                 string deviceName = GetDevNameByID(int.Parse(item.Value));
                 string MessageText = Events.GetMessageText(ElsysConfig.DevTypes.dtCU, 11);
-                OnMessage(string.Format("\"{0}\" {1}", deviceName, MessageText), "");
+                OnMessage?.Invoke(string.Format("\"{0}\" {1}", deviceName, MessageText), "");
             }
         }
 
@@ -1594,7 +1599,7 @@ namespace DutyPoll
             {
                 string mbnetName = GetDevNameByID(int.Parse(item.Value));
                 string MessageText = Events.GetMessageText(ElsysConfig.DevTypes.dtMBNet, 11);
-                OnMessage(string.Format("\"{0}\" {1}", mbnetName, MessageText), "");
+                OnMessage?.Invoke(string.Format("\"{0}\" {1}", mbnetName, MessageText), "");
             }
         }
 
@@ -1604,7 +1609,7 @@ namespace DutyPoll
             {
                 string deviceName = GetDevNameByID(int.Parse(item.Value));
                 string MessageText = Events.GetMessageText(ElsysConfig.DevTypes.dtCU, 10);
-                OnMessage(string.Format("\"{0}\" {1}", deviceName, MessageText), "");
+                OnMessage?.Invoke(string.Format("\"{0}\" {1}", deviceName, MessageText), "");
             }
         }
 
@@ -1614,7 +1619,7 @@ namespace DutyPoll
             {
                 string mbnetName = GetDevNameByID(int.Parse(item.Value));
                 string MessageText = Events.GetMessageText(ElsysConfig.DevTypes.dtMBNet, 10);
-                OnMessage(string.Format("\"{0}\" {1}", mbnetName, MessageText), "");
+                OnMessage?.Invoke(string.Format("\"{0}\" {1}", mbnetName, MessageText), "");
             }
         }
 
@@ -1625,9 +1630,9 @@ namespace DutyPoll
             if (aControlCmdsResponse.Element("ErrCode") != null)
                 errorCode = int.Parse(aControlCmdsResponse.Element("ErrCode").Value);
             if (result)
-                OnMessage("Успешное выполнение команды.", "");
+                OnMessage?.Invoke("Успешное выполнение команды.", "");
             else
-                OnMessage(string.Format("Ошибка выполнения команды: {0}", errorCode), "");
+                OnMessage?.Invoke(string.Format("Ошибка выполнения команды: {0}", errorCode), "");
         }
 
         private void HandleNumericalHWParams(XElement aControlCmdsResponse)
@@ -1641,7 +1646,7 @@ namespace DutyPoll
                 int alItemCount = int.Parse(item.Element("ALItemCount").Value);
                 int holidayCount = int.Parse(item.Element("HolidayCount").Value);
                 string deviceName = GetDevNameByID(deviceID);
-                OnMessage(string.Format("\"{0}\": постоянных карт - {1}, временных карт - {2}, временных блоков - {3}, элементов УД - {4}, праздников - {5}",
+                OnMessage?.Invoke(string.Format("\"{0}\": постоянных карт - {1}, временных карт - {2}, временных блоков - {3}, элементов УД - {4}, праздников - {5}",
                   deviceName, cardCount, cardTmCount, tzItemCount, alItemCount, holidayCount), "");
             }
         }
@@ -1659,9 +1664,9 @@ namespace DutyPoll
             if (result)
             {
                 if (InitData.TotalCommandID < InitData.TotalCommandCount)
-                    OnInit((InitData.TotalCommandID * 100) / InitData.TotalCommandCount);
+                    OnInit?.Invoke((InitData.TotalCommandID * 100) / InitData.TotalCommandCount);
                 else
-                    OnInit(100);
+                    OnInit?.Invoke(100);
 
                 lock (InitData)
                 {
@@ -1677,14 +1682,14 @@ namespace DutyPoll
             {
                 if (!(busy && (errcode == 0)))
                 {
-                    OnMessage("Инициализация завершена с ошибкой: " + errcode.ToString(), "");
+                    OnMessage?.Invoke("Инициализация завершена с ошибкой: " + errcode.ToString(), "");
                     TimeSpan timeSpan = DateTime.Now - BeginInitTime;
-                    OnMessage(string.Format("Время инициализации: {0}", timeSpan.ToString()), "");
+                    OnMessage?.Invoke(string.Format("Время инициализации: {0}", timeSpan.ToString()), "");
                     lock (InitData)
                     {
                         InitData.InitState = TInitState.istNone;
                     }
-                    OnInit(100);
+                    OnInit?.Invoke(100);
                 }
             }
         }
@@ -1724,9 +1729,9 @@ namespace DutyPoll
                     if (DevState != "")
                         MessageText = string.Format("{0} (Состояние: {1})", MessageText, DevState);
                     else
-                        OnMessage(string.Format("\"{0}\" Состояние не найдено: тип устройства - {1} код состояния - {2}", DevName, devtype, StateCode), EventDateTime);
+                        OnMessage?.Invoke(string.Format("\"{0}\" Состояние не найдено: тип устройства - {1} код состояния - {2}", DevName, devtype, StateCode), EventDateTime);
                 }
-                OnMessage(string.Format("\"{0}\" {1}", DevName, MessageText), EventDateTime);
+                OnMessage?.Invoke(string.Format("\"{0}\" {1}", DevName, MessageText), EventDateTime);
             }
         }
 
@@ -1740,11 +1745,11 @@ namespace DutyPoll
                 int DevType = GetDevTypeByID(ID);
                 string DevState = States.GetStateText(DevType, StateCode);
                 if (DevState == "")
-                    OnMessage(string.Format("\"{0}\" Состояние не найдено: тип устройства - {1} код состояния - {2}", DevName, DevType, StateCode), "");
+                    OnMessage?.Invoke(string.Format("\"{0}\" Состояние не найдено: тип устройства - {1} код состояния - {2}", DevName, DevType, StateCode), "");
                 else
                 {
                     if (ShowDevStates)
-                        OnMessage(string.Format("\"{0}\" Состояние: {1}", DevName, DevState), "");
+                        OnMessage?.Invoke(string.Format("\"{0}\" Состояние: {1}", DevName, DevState), "");
                 }
             }
         }
@@ -1821,9 +1826,9 @@ namespace DutyPoll
                 {
                     var mbnet = GetMBNetByAddr(i + 1);
                     if (onlineMBNets[i])
-                        OnMessage(string.Format("\"{0}\" OnlineStatus: {1}", mbnet.Attribute("Name").Value, "Восстановление связи"), "");
+                        OnMessage?.Invoke(string.Format("\"{0}\" OnlineStatus: {1}", mbnet.Attribute("Name").Value, "Восстановление связи"), "");
                     else
-                        OnMessage(string.Format("\"{0}\" OnlineStatus: {1}", mbnet.Attribute("Name").Value, "Потеря связи"), "");
+                        OnMessage?.Invoke(string.Format("\"{0}\" OnlineStatus: {1}", mbnet.Attribute("Name").Value, "Потеря связи"), "");
                 }
             }
 
@@ -1840,9 +1845,9 @@ namespace DutyPoll
                         {
                             var dev = GetDeviceByAddr(lineID, i + 1);
                             if (onlineDevices[i])
-                                OnMessage(string.Format("\"{0}\" OnlineStatus: {1}", dev.Element("MBDev").Element("Name").Value, "Восстановление связи"), "");
+                                OnMessage?.Invoke(string.Format("\"{0}\" OnlineStatus: {1}", dev.Element("MBDev").Element("Name").Value, "Восстановление связи"), "");
                             else
-                                OnMessage(string.Format("\"{0}\" OnlineStatus: {1}", dev.Element("MBDev").Element("Name").Value, "Потеря связи"), "");
+                                OnMessage?.Invoke(string.Format("\"{0}\" OnlineStatus: {1}", dev.Element("MBDev").Element("Name").Value, "Потеря связи"), "");
                         }
                     }
                 }
@@ -1937,7 +1942,7 @@ namespace DutyPoll
                     PrepareUserChangeItems();
                     PrepareCommandTotalCounter();
                     PrepareCommandData();
-                    OnInit(0);
+                    OnInit?.Invoke(0);
                 }
             }
         }
@@ -1957,7 +1962,7 @@ namespace DutyPoll
                     PrepareMBNetCardChangeItems();
                     PrepareCommandTotalCounter();
                     PrepareCommandData();
-                    OnInit(0);
+                    OnInit?.Invoke(0);
                 }
             }
         }
@@ -1976,7 +1981,7 @@ namespace DutyPoll
                     PrepareMBNetOPSChangeItems();
                     PrepareCommandTotalCounter();
                     PrepareCommandData();
-                    OnInit(0);
+                    OnInit?.Invoke(0);
                 }
             }
         }
@@ -1995,7 +2000,7 @@ namespace DutyPoll
                     PrepareCUOPSChangeItems();
                     PrepareCommandTotalCounter();
                     PrepareCommandData();
-                    OnInit(0);
+                    OnInit?.Invoke(0);
                 }
             }
         }
@@ -2016,7 +2021,7 @@ namespace DutyPoll
                         PrepareChangesInfo();
                         PrepareCommandTotalCounter();
                         PrepareCommandData();
-                        OnInit(0);
+                        OnInit?.Invoke(0);
                     }
                     else
                     {
@@ -2042,7 +2047,7 @@ namespace DutyPoll
                         PrepareChangesInfo();
                         PrepareCommandTotalCounter();
                         PrepareCommandData();
-                        OnInit(0);
+                        OnInit?.Invoke(0);
                     }
                     else
                     {
@@ -2400,7 +2405,7 @@ namespace DutyPoll
                         PrepareChangesInfo();
                         PrepareCommandTotalCounter();
                         PrepareCommandData();
-                        OnInit(0);
+                        OnInit?.Invoke(0);
                     }
                     else
                     {
@@ -2500,7 +2505,7 @@ namespace DutyPoll
                         PrepareChangesInfo();
                         PrepareCommandTotalCounter();
                         PrepareCommandData();
-                        OnInit(0);
+                        OnInit?.Invoke(0);
                     }
                     else
                     {
@@ -2605,7 +2610,7 @@ namespace DutyPoll
                         PrepareChangesInfo();
                         PrepareCommandTotalCounter();
                         PrepareCommandData();
-                        OnInit(0);
+                        OnInit?.Invoke(0);
                     }
                     else
                     {
@@ -2646,7 +2651,7 @@ namespace DutyPoll
                         PrepareChangesInfo();
                         PrepareCommandTotalCounter();
                         PrepareCommandData();
-                        OnInit(0);
+                        OnInit?.Invoke(0);
                     }
                     else
                     {
@@ -2746,7 +2751,7 @@ namespace DutyPoll
                         PrepareChangesInfo();
                         PrepareCommandTotalCounter();
                         PrepareCommandData();
-                        OnInit(0);
+                        OnInit?.Invoke(0);
                     }
                     else
                     {
@@ -3803,7 +3808,7 @@ namespace DutyPoll
                     InitData.MBNetOPSConfigNew = null;
                     PrepareCommandData();
                     PrepareCommandTotalCounter();
-                    OnInit(0);
+                    OnInit?.Invoke(0);
                 }
             }
         }
